@@ -1,5 +1,16 @@
+# require "pry"
+
 def fibonacci(num)
-  # type your code in here
+  return 0 if num == 0
+  # binding.pry
+  fib_arr = [0, 1]
+  counter = num - 1
+
+  counter.times do |index|
+    new_fib_num = fib_arr[-1] + fib_arr[-2]
+    fib_arr.push new_fib_num
+  end
+  fib_arr[-1]
 end
 
 if __FILE__ == $PROGRAM_NAME
